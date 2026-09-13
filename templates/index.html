@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}CampusSwap — Browse{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Buy and sell within your campus</h1>
+  <p>Browse what other students are selling, search in plain language, or ask about the catalogue.</p>
+</section>
+
+<form class="search-box" id="search-form">
+  <input type="text" id="search-input" placeholder='Try "cheap desk lamp" or "textbook for calculus"' />
+  <button type="submit" id="search-btn">Search</button>
+</form>
+<div class="mode-badge" id="mode-badge" style="display:none"></div>
+
+<div id="results">
+  <div class="grid">
+    {% for item in listings %}
+    <a class="card" href="/item/{{ item.id }}">
+      <div class="card-emoji">{{ item.emoji }}</div>
+      <div class="card-title">{{ item.title }}</div>
+      <div class="card-meta">{{ item.category }} · {{ item.condition }} · {{ item.location }}</div>
+      <div class="card-price">${{ item.price }}</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<section class="section">
+  <h2>Ask about the catalogue</h2>
+  <form class="qna-box" id="qna-form">
+    <input type="text" id="qna-input" placeholder='Try "which desk is cheapest?" or "compare the two bikes"' />
+    <button type="submit" id="qna-btn">Ask</button>
+  </form>
+  <div class="qna-thread" id="qna-thread"></div>
+</section>
+{% endblock %}

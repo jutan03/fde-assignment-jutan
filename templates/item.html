@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ item.title }} — CampusSwap{% endblock %}
+{% block content %}
+<a class="back-link" href="/">← Back to browse</a>
+<div class="detail">
+  <div class="detail-emoji">{{ item.emoji }}</div>
+  <h1>{{ item.title }}</h1>
+  <div class="card-price">${{ item.price }}</div>
+  <div class="detail-meta">
+    <span>{{ item.category }}</span>
+    <span>{{ item.condition }}</span>
+    <span>{{ item.location }}</span>
+    <span>Posted {{ item.posted_ago }}</span>
+  </div>
+  <p>{{ item.description }}</p>
+  <p class="card-meta">Seller: {{ item.seller }} (demo profile, not a real user)</p>
+  <button class="btn" disabled title="Payments are simulated in this demo">
+    Message seller (simulated)
+  </button>
+</div>
+{% endblock %}

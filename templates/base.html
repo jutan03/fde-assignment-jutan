@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}CampusSwap{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="brand">🎒 CampusSwap</a>
+    <nav class="nav">
+      <a href="/">Browse</a>
+      <a href="/notes">Notes</a>
+    </nav>
+  </header>
+  <main class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    Demo project for the CognitioLabs Associate FDE assessment. Not a real marketplace —
+    all listings are seeded and payments are simulated.
+  </footer>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
