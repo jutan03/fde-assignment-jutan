@@ -28,7 +28,7 @@ the API routes in `app.py`). It's never sent to the browser — the frontend
 
 ## 2. Install/ Clone the repo
 
-Clone the repo, then in a terminal:
+In terminal:
 
 ```bash
 python3 -m venv .venv
