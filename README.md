@@ -26,12 +26,11 @@ the API routes in `app.py`). It's never sent to the browser — the frontend
 
 - Python 3.9 or newer (check with `python3 --version`).
 
-## 2. Install
+## 2. Install/ Clone the repo
 
-Unzip the project, then in a terminal:
+Clone the repo, then in a terminal:
 
 ```bash
-cd campus-swap-py
 python3 -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
