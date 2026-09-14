@@ -3,15 +3,11 @@
 {% block content %}
 <div class="notes">
   <h1>Notes</h1>
-  <p class="callout">
-    ✏️ This page is a starting draft. Before you submit, edit it in your own words — especially
-    the sections on what you chose not to build and any known issues you actually ran into.
-  </p>
 
   <h2>1. What I built, and who it's for</h2>
   <p>
-    CampusSwap is a second-hand marketplace demo aimed at university students trading within
-    their own campus community — furniture, textbooks, electronics, bikes and dorm essentials.
+    CampusSwap is a second-hand marketplace demo aimed at university students on a tight budget
+    to get daily needs — furniture, textbooks, electronics, bikes and even dorm essentials.
     It has a mobile-friendly browse view, an item detail view, natural-language search over the
     catalogue, and a catalogue Q&amp;A assistant. No sign-in is required to explore any of it.
   </p>
@@ -21,12 +17,12 @@
     <li>The catalogue is 15 seeded listings with fictional sellers — there are no real users.</li>
     <li>"Message seller" and payments are simulated; the button is disabled and labelled as such.</li>
     <li>Photos are represented with emoji placeholders instead of real images.</li>
-    <li>There is no authentication, and the assignment doesn't call for one.</li>
   </ul>
 
   <h2>3. AI tools and models</h2>
   <ul>
-    <li>Built with [name the AI coding tool(s) you actually used, e.g. Codex CLI].</li>
+    <li>Built by submitting the assignemnt brief and API information (censored within the prompt) into claude.ai
+      and requesting for a Python code.</li>
     <li>
       Natural-language search embeds the catalogue and the query with
       <code>openai/text-embedding-3-small</code> via the gateway's OpenRouter-compatible route,
@@ -54,7 +50,6 @@
       A persistent vector database — the catalogue is small and static, so an in-memory index
       computed once per server start was enough for this demo.
     </li>
-    <li>[Add anything else you deliberately left out and why.]</li>
   </ul>
 
   <h2>5. Known issues and unfinished parts</h2>
@@ -63,7 +58,6 @@
       The embedding index is rebuilt from scratch whenever the server restarts, which adds a
       short delay to the first search after a restart.
     </li>
-    <li>[Add anything you ran out of time to fix, or bugs you noticed.]</li>
   </ul>
 </div>
 {% endblock %}
